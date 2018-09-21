@@ -1,0 +1,216 @@
+page-buy-travel-pass {
+    .bsc-header {
+        background:#62a830;
+    }
+
+    .selected {
+        color: #62a830;
+        clear: false
+    }
+
+   .form-col {
+      min-width: 300px;
+      max-width: 500px;
+      background-color: white;
+      padding: 4rem;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   }
+
+   .payment-title {
+      color: #577f8a;
+      font-size: 17px;
+      font-family: arial;
+      font-weight: bold;
+      position: relative;
+      text-align: center;
+   }
+
+   .form-grid{
+      margin-left: 10%;
+      margin-right: 10%;
+      width: 80%;
+      margin-bottom: 20px;
+      background-color: white;
+
+   }
+
+   .error-text {
+      span{
+         color: #62a830;
+         font-size: 22px;
+         cursor: pointer;        
+      }
+   }
+
+   .ticket-summary{
+      background-color: #fff;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-top: 30px
+   }
+
+   .form-panel .form-item{
+      box-shadow: 0 0 0 1px #d2d1d1;
+   }
+
+	.travel-grid{
+ 		padding-left: 5%;
+ 		padding-right: 5%;
+ 		height: 100%;
+   	text-align: center;
+	}
+
+   .bar-text{
+      font-family: initial;
+      color: #2f606e;
+      font-weight: bold;
+      font-size: 17px;
+      margin-top: 15px;
+   }
+
+	.grid-row{
+		text-align: center;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      height: 40px;
+
+      p{
+         color: #486b75;
+         font-family: initial; 
+         font-size: 18px
+      }
+	}
+
+	.selected-grid{
+		text-align: center;
+      min-width: 250px;
+      max-width: 600px;
+      margin-top: 10px;     
+	}
+
+   .selected-grid2{
+      min-width: 250px;
+      max-width: 600px;
+      background-color: #577f8a;
+      min-height: 1000px;  
+   }
+
+   .payment-btn{
+      text-align: right;
+      display: block;
+      padding-top: 10px;
+   }
+
+   .bold-text {
+      font-size: 20px;
+      font-weight: 500;
+   }
+
+   .button.customBtn {
+        width:150px;
+   }
+
+   .page-paddingtext {
+      padding-top: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      color: #0a5877;
+      justify-content: center;
+   }
+   
+   .page-lastpaddingtext {
+      padding-top: 0px;
+      margin-top: 0px;
+      color: #0a5877;
+      justify-content: center;
+   }
+   
+   .static-ctext {
+      background:#39807f;
+      text-align: center;
+      margin-top: 0px;
+      margin-bottom: 0px;
+   }
+
+   .vertical {
+     
+   }
+
+   .page-text {
+      text-align: center;
+      color: #378391;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+   }
+
+   .counter-btn {
+      margin-top: 20px;
+      height: 2.8vh;
+      max-width: 30px;
+      color: white;
+      background-color: #39807f;
+      margin-left: 1vw;
+      margin-right: 1vw;
+   }
+
+   .counter-col {
+      padding: 0px
+   }
+
+   .box1-content {
+      padding-top: 5px;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+   }
+
+   .border-element1 {
+      background-color: white;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    }
+
+   .unit-component{
+      color: white;
+      padding-top: 5px;
+   }
+
+   .center-msg{
+      text-align: center;
+      color: #577f8a;
+      margin-bottom: -10px
+
+   }
+
+   .box2-content{
+      margin-bottom: 0px;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      .type-para {
+      }
+   }
+
+   ion-input{
+      background-color: white;
+   }
+
+   .save-btn{
+     text-align: center;
+     margin-top: 20px;
+     margin-bottom: 20px;
+   }
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
+}

@@ -1,0 +1,38 @@
+page-service-details {
+	.bsc-header {
+		background:#62a830;
+	}
+
+	.selected {
+		color: #62a830;
+		clear: false
+	}
+	.details {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 0px;
+	}
+
+	.details-row {
+		display: flex; 
+		justify-content: center; 
+		padding-left: 10%; 
+		padding-right: 10%; 
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+
+	.help-btn {
+		margin-right: 30px;
+	    height: 30px;
+	   	color: #449494;
+	    font-size: 17px;
+	    background-color: white;
+	  }
+
+	  .img-help {
+	  	cursor: pointer;
+	  	max-width: 300px;
+	  	padding-right: 10px;
+	  }
+}

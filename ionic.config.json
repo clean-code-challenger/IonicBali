@@ -1,0 +1,8 @@
+{
+  "name": "NewProj",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "fda1af03"
+}

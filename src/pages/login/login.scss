@@ -1,0 +1,64 @@
+page-login {
+	.form-col {
+		min-width: 300px;
+		max-width: 500px;
+
+		h6 {
+			text-align: center;
+		}
+	}
+
+	.text-button {
+		cursor: pointer;
+		text-align: right;
+		color: #62a830;
+	}
+
+	.sub-button {
+		color: #62a830;
+		font-size: 22px;
+		cursor: pointer;
+	}
+
+	.form-panel{
+		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		background-color: #fff;
+	    padding-top: 4rem;
+    	padding-left: 4rem;
+	    padding-right: 4rem;
+	    padding-bottom: 3rem;
+	    margin-bottom: 2rem ;
+	}
+	.form-panel .form-item{
+		box-shadow: 0 0 0 1px #d2d1d1;
+	}
+
+	.form-header {
+		color: #547d88;
+		height: 60px;
+		text-align: center;
+		padding-top: 0px;
+		margin-right: 10%;
+		margin-left: 10%;
+		font-size: 25px;
+		margin-bottom: 0px;
+	}
+
+}
+
+ion-app.md [padding-left].text-md-danger{
+	padding-left: 0;
+	margin-left: 0px;
+	margin-top: 5px;
+    margin-bottom: 0;
+}
+
+
+ion-app.ios [padding-left] {
+	padding-left: 0px;
+	margin-left: 0px;
+	margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+

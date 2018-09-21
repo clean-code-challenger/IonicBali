@@ -1,0 +1,86 @@
+<ion-header hideWhen="core">
+  <page-bsc-header ></page-bsc-header>
+  <ion-grid class='bsc-header'>
+    <ion-row style="text-align: center; display: flex; justify-content: center;">
+      <ion-col>
+        <ion-row>
+          <ion-col *ngFor="let page of pages">
+            <button *ngIf='header==page.title' ion-button class="header-button" color='primary' item-left full (click)="moveToServiceDetails(page)">{{page.title}}</button>
+            <button *ngIf='header!=page.title' ion-button class="header-button" color='light' clear item-left full (click)="moveToServiceDetails(page)">{{page.title}}</button>
+          </ion-col>
+
+        </ion-row>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+
+	<page-bsc-header header='Our Services' showWhen="core"></page-bsc-header>
+
+	<h2 hideWhen='core' class="mobile-sub-header">OUR SERVICES</h2>
+  <h2 showWhen='core' class="core-sub-header">OUR SERVICES</h2>
+
+  <h6 class="placeholder" [hidden]="bundleServices.length > 0 || !isListLoaded">No Services Found</h6>
+
+	<ion-grid class = "grid-adjust">
+        <ion-row showWhen="core" class='service-row'>
+            <ion-col col-4  class="flexgrid-core" *ngFor="let data of bundleServices">
+                  <div class="services-imgwrap" (click)="moveToServiceDetails(data)"><img src={{data.image_name}} class="services-img"></div>
+                  <button class="service-btn" ion-button full (click)="moveToServiceDetails(data)">
+                    {{data.title | uppercase}}
+                  </button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row hideWhen="core" class='service-row'>
+            <ion-col class="flexgrid-mobile" *ngFor="let data of bundleServices">
+                  <div class="services-imgwrap" (click)="moveToServiceDetails(data)" ><img src={{data.image_name}} class="services-img"></div>
+                  <button class="service-btn" ion-button full (click)="moveToServiceDetails(data)">
+                    {{data.title | uppercase}}
+                  </button>
+            </ion-col>
+        </ion-row>
+  </ion-grid>
+	<page-bsc-footer></page-bsc-footer>
+</ion-content>
+
+
+<ion-footer hideWhen="core">
+  <ion-row>
+    <ion-col no-padding>
+        <button no-margin ion-button full color="dark" (click)="openService()">
+          <div>
+            <ion-icon name="paper"></ion-icon><br>
+            <label>Services</label>
+          </div>
+        </button>
+    </ion-col>
+    <ion-col no-padding>
+        <button no-margin ion-button full color="light" (click)="openToday()">
+          <div>
+            <ion-icon name="partly-sunny"></ion-icon><br>
+            <label>Today</label>
+          </div>
+        </button>
+    </ion-col>
+    <ion-col no-padding>
+      <button no-margin ion-button full color="light" (click)="openFavourites()">
+        <div>
+          <ion-icon name="star"></ion-icon><br>
+          <label>Favourites</label>
+        </div>
+      </button>
+    </ion-col>
+    <ion-col no-padding>
+      <button no-margin ion-button full color="light" (click)="openMe()">
+        <div>
+          <ion-icon name="contact"></ion-icon><br>
+          <label>Me</label>
+        </div>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

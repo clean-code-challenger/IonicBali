@@ -1,0 +1,57 @@
+page-bsc-header {
+
+	.toolbar-background {
+    background-color: #547d88
+  }
+
+  .centerImage {
+  	align-items: center;
+  }
+
+  .vericalCenter {
+    margin-top : 25px;
+  }
+
+  .selected {
+  	color: #62a830;
+  	clear: false
+  }
+
+  .default {
+  	color: #f4f4f4;
+  	clear: true
+  }
+
+  .header-button {
+    color:white
+  }
+
+  .login {
+    width: 100px;
+  }
+
+  .bsc-header {
+    background:#62a830;
+  }
+
+  .header-logout {
+     background-color: #547d88;
+     color: white;
+     font-weight: bold;
+     font-size: 13px;
+  }
+
+  .header-logo {
+    margin-top: 9px; height: 6vmin;
+    max-height: 30px;
+  }
+
+  .logout-col{
+    text-align: right
+  }
+
+  .right-img {
+    margin-right: -20px;
+  }
+
+}

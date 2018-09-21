@@ -1,0 +1,41 @@
+page-in-bali {
+	h6 {
+		text-align: center;
+		margin-top: 0px;
+	}
+
+	.flexgrid-core{
+  		min-width: 250px;
+  		margin-top: 20px;
+  		margin-bottom: 40px;
+
+      button {
+        font-size: 17px;
+        height: 50px;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+  	}
+
+  	.flexgrid-mobile{
+  		min-width: 260px;
+  		margin-top: 10px;
+  		padding-bottom: 10px;
+
+      button {
+        font-size: 17px;
+        height: 50px;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+		}
+		
+	.bsc-header {
+		background:#62a830;
+	}
+
+	.selected {
+		color: #62a830;
+		clear: false
+	}
+}

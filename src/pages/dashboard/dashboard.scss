@@ -1,0 +1,69 @@
+page-dashboard {
+  .flexgrid-core{
+      
+      margin-top: 40px;
+      margin-bottom: 40px;
+      min-width: 300px;
+      margin-right: 10px;
+      .services-img {
+        
+      }
+
+  }
+
+
+  .services-imgwrap{
+      height: 192px;
+      width: 100%;
+      cursor: pointer;
+       
+      img {
+    
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      // background: #f0f0f0;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+
+
+  .flexgrid-mobile{
+    min-width: 300px;
+    max-width: 300px;
+    margin-bottom: 6vh;
+    
+      .services-img {
+
+      
+    
+      }
+
+  }
+
+      .service-btn .button-inner{
+      white-space: nowrap; 
+      width: 150px; 
+      overflow: hidden;
+      text-overflow: ellipsis; 
+      display: block;
+      line-height: 2.6;
+      margin: 0 auto;
+  }
+
+
+    .service-row {
+      text-align: center; 
+      display: flex; 
+      justify-content: center; 
+      padding-left: 10%; 
+      padding-right: 10%; 
+      padding-top: 20px; 
+      padding-bottom: 20px;
+    }
+
+   .customPara {
+      color:#ffff;
+      text-align: center
+    }
+}

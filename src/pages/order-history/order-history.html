@@ -1,0 +1,114 @@
+<ion-header hideWhen="core">
+  <page-bsc-header ></page-bsc-header>
+</ion-header>
+
+<ion-content>
+
+	<page-bsc-header showWhen="core"></page-bsc-header>
+	<h2 hideWhen='core' class="mobile-sub-header">ORDERS</h2>
+  	<h2 showWhen='core' class="core-sub-header">ORDERS</h2>	
+  	
+    <h6 class="placeholder" [hidden]="bundleOrderList.length > 0 || !isListLoaded">No Orders Found</h6>
+
+    <ion-grid class = "grid-adjust" >
+
+  	<ion-grid class='flexgrid-2' showWhen="core" [hidden]="bundleOrderList.length == 0">
+
+          <ion-row class = "flexgrid-row-head">
+            
+            <ion-col>
+                    <p>ORDER ID</p>
+            </ion-col>
+            
+            <ion-col>        
+                      <p>ORDER NUMBER</p>
+            </ion-col>
+           
+            <ion-col>
+               <p>NAME</p>
+            </ion-col>
+             
+             <ion-col>
+                  <p>DATE</p>
+            </ion-col>
+           
+            <ion-col>
+              <p>TICKETS PURCHASED</p>
+           </ion-col> 
+          
+           <ion-col>
+              <p>AMOUNT</p>
+           </ion-col>
+        </ion-row>
+    
+      <ion-row class = "flexgrid-row" *ngFor = "let order of bundleOrderList;" >
+            <ion-col >
+                    <p>{{order.order_id}}</p>
+            </ion-col>
+            
+            <ion-col>        
+                      <p>{{order.order_no}}</p>
+            </ion-col>
+           
+            <ion-col>
+               <p>{{order.name | uppercase}}</p>
+            </ion-col>
+             
+             <ion-col>
+                  <p>{{order.order_date}} {{order.order_date.timezone}}</p>
+            </ion-col>
+            <ion-col>
+              <p>{{order.ticket_info | uppercase}}</p>
+           </ion-col>
+            <ion-col>
+              <p>AU$ {{order.amount}}</p>
+           </ion-col>
+      </ion-row>
+  </ion-grid>
+  
+
+<ion-list>
+   <ion-grid class='flexgrid' hideWhen="core">
+     <ion-item no-lines *ngFor="let order of bundleOrderList" text-wrap>
+           <ion-row class= "sub-header" (click)="toggleSection(order)">
+             <ion-col>
+              <h3 class="mobile-toggle-header">{{order.name | uppercase}}</h3>
+            </ion-col>
+            <ion-col col-1 class="icon-arrow">
+                  <img src="assets/imgs/down-arrow.png" *ngIf="order.is_open" >
+                  <img src="assets/imgs/arrow-up.png" *ngIf="!order.is_open" >
+                  </ion-col>
+          </ion-row>
+         <ion-row [hidden]="order.is_open" class = "toggle-content">
+              <ion-col>
+                <ion-row>
+                  <p class = "mobile-text"><b>ORDER ID : </b>{{order.order_id}}</p>
+                </ion-row>
+                <ion-row>
+                  <p class = "mobile-text"><b>ORDER NUMBER : </b>{{order.order_no}}</p>
+                </ion-row>
+                <ion-row>    
+                  <p class = "mobile-text"><b>ORDER DATE : </b>{{order.order_date}}</p>
+                </ion-row>
+                <ion-row>  
+                 <p class = "mobile-text"><b>TICKETS PURCHASED : </b>{{order.ticket_info | uppercase}}</p>
+                </ion-row>
+                <ion-row>
+                  <p class = "mobile-text"><b>AMOUNT : </b>AU$ {{order.amount}}</p>
+                </ion-row>
+              </ion-col>
+        </ion-row>
+  </ion-item>
+ </ion-grid>
+</ion-list>
+
+
+  <div style="text-align: center; margin-bottom: 20px;">
+    <button ion-button color='primary' outline (click)='buttonBackPressed()'>Back</button>
+  </div>
+</ion-grid>
+
+
+	<page-bsc-footer></page-bsc-footer>
+
+</ion-content>

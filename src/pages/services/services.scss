@@ -1,0 +1,88 @@
+page-services {
+	.flexgrid-core{
+  		
+      margin-top: 40px;
+      margin-bottom: 40px;
+      min-width: 300px;
+
+	    .services-img {
+	      
+	    }
+
+  }
+
+
+  .services-imgwrap{
+      height: 192px;
+      width: 100%;
+      cursor: pointer;
+       
+      img {
+    
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+
+    }
+  }
+
+
+  .flexgrid-mobile{
+    min-width: 300px;
+    max-width: 300px;
+    
+      .services-img {
+
+      
+    
+      }
+
+  }
+
+      .service-btn .button-inner{
+      white-space: nowrap; 
+      width: 150px; 
+      overflow: hidden;
+      text-overflow: ellipsis; 
+      display: block;
+      line-height: 2.6;
+      margin: 0 auto;
+  }
+
+
+  .service-row {
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    padding-left: 10%; 
+    padding-right: 10%; 
+    padding-top: 20px; 
+    padding-bottom: 20px;
+  }
+
+  .customPara {
+    color:#ffff;
+    text-align: center
+  }
+
+  .service-btn .button-inner{
+    white-space: nowrap; 
+    width: 150px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    display: block;
+    line-height: 2.6;
+    margin: 0 auto;
+  }
+
+  .bsc-header {
+    background:#62a830;
+  }
+
+  .selected {
+  	color: #62a830;
+  	clear: false
+  }
+  
+}

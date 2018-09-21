@@ -1,0 +1,196 @@
+page-ticket-details {
+
+	.toolbar-background {
+		background-color: #547d88
+	}
+	.form-col {
+		min-width: 300px;
+		max-width: 700px;
+		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		h6 {
+			text-align: center;
+		}
+	}
+
+	.user-imgwrap{
+		height: 192px;
+		width: 100%;
+
+		img {    
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.para-head{
+		color: #83838c;
+		font-family: "verdana";
+		font-weight: bold;
+		margin-top: 5px
+	}
+
+	.para-head-mand{
+		color: #c7847f;
+		font-family: "verdana";
+		font-weight: bold;
+		margin-top: 5px
+	}
+
+	.text-input[disabled] {
+		opacity: .7;
+	}
+
+	.edit-button{
+		text-align: right;
+		float:right;	
+	}
+
+	.sub-button {
+		color: #62a830;
+		font-size: 22px;
+		cursor: pointer;
+	}
+
+	.submit-button{
+	}
+
+	.form-panel{
+		background-color: #fff;
+		padding: 4rem;
+		margin-bottom: 2rem ;
+	}
+
+	.form-panel .form-item{
+		box-shadow: 0 0 0 1px #d2d1d1;
+	}
+
+	input[type='file'] {
+		color: transparent;
+	}
+
+	.header{
+		color: white
+	}
+
+	.image-name {
+		color: green
+	}
+
+	.dashboard-image-div {
+		text-align: center;
+		margin-top: 30px;
+
+		h5 {
+			color: #62a830;
+			font-size: 18px;
+			font-weight: 400
+		}
+
+		.dashboard-image {
+			width: 200px;
+			height: 200px;
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			object-fit: cover;
+			cursor: pointer;
+		}
+
+		.dashboard-doc {
+			width: 200px;
+			height: 200px;
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			object-fit: cover;
+		}
+
+		.custom-file-select {
+			cursor: pointer;
+			font-size: 13px;
+			border:1pt solid gray;
+			padding-left: 5px;
+			padding-right: 5px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			color: solid gray;
+			margin-top: 5px;
+			margin-bottom: 10px;
+		}
+
+		.custom-file-select-add {
+			cursor: pointer;
+			font-size: 13px;
+			border:1pt solid gray;
+			padding-left: 5px;
+			padding-right: 5px;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			color: solid gray;
+			margin-top: 5px;
+			margin-bottom: 40px;
+			background-color: #63a722;
+			color: white;
+			border: solid 1px #bcd2a2;
+		}
+	}
+
+	.logout-button {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.dashboard-grid {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.sub-header {
+		background-color: #547d88;
+		/*text-align: center;*/
+		margin-top: 0px;
+		margin-bottom: 0px;
+		color: #ffff;
+		height: 140px;
+		padding-top: 10px;
+		font-weight: 600;
+		/*font-size: 30px;*/
+		background-image: url('../assets/imgs/background.png');
+		
+	}
+	.text3{
+		text-align: center;
+		font-weight: 600;
+		font-size: 30px;
+
+	}
+
+	.travelPass-grid{
+		max-width: 500px;
+		text-align: center;
+		align-self: center;
+		background: #FFF;
+		margin-bottom: 20px
+	}
+
+}
+
+ion-app.md [padding-left].text-md-danger{
+	padding-left: 0;
+	margin-left: 0px;
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+
+ion-app.ios [padding-left] {
+	padding-left: 0px;
+	margin-left: 0px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+

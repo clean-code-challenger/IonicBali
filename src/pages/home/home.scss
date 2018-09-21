@@ -1,0 +1,85 @@
+page-home {
+
+	.toolbar-background {
+    background-color: #547d88
+  }
+
+  .bar-header {
+    
+  }
+
+  .toolbar-title .toolbar-title-ios {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    pointer-events: auto;
+  }
+
+
+  .flexgrid{
+  	min-width: 300px;
+    max-width: 300px;
+    margin-bottom: 10px;
+
+    .services-img {
+      
+    }
+
+  }
+
+  .services-imgwrap{
+      height: 192px;
+      width: 100%;
+      cursor: pointer;
+       
+      img {
+    
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .flexgrid-type{
+    min-width: 300px;
+
+    img {
+      margin-top: 10px
+    }
+    
+  }
+
+
+  .customPara {
+  	color:white;
+  	text-align: center
+  }
+
+  .centerImage {
+  	align-items: center;
+    max-width: 80%;
+  }
+
+  .vericalCenter {
+    margin-top : 25px;
+  }
+  
+  .service-btn .button-inner{
+      white-space: nowrap; 
+      width: 150px; 
+      overflow: hidden;
+      text-overflow: ellipsis; 
+      display: block;
+      line-height: 2.6;
+      margin: 0 auto;
+  }
+
+  .bsc-header {
+    background:#62a830;
+  }
+
+  .selected {
+  	color: #62a830;
+  	clear: false
+  }
+}
