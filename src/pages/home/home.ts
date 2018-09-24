@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, LoadingController, Tabs } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import { CMS_PAGES } from '../../providers/constants/constants'
 
@@ -9,7 +9,8 @@ import { CMS_PAGES } from '../../providers/constants/constants'
 })
 export class HomePage {
 
-  pages: Array<{title: string, icon: any, page: any}>;
+  @ViewChild('bottomTabs') tabsRef: Tabs;
+  pages: Array<{title: string, value: any, page: any}>;
   cmsPages : Array<{id: any, name: '', alias: '', page: any}>;
   bundleData : {data : any};
 	bundleServices : any[] = [];
@@ -23,15 +24,21 @@ export class HomePage {
                             status:'',
                             title:'Medical Assistance', updated_at:''
                           } 
+  tab1 = 'ContactUsPage';
+  tab2 = 'InBaliPage';
+  tab3 = 'FavouritesPage';
+  tab4 = 'AccountPage';
+
+  public pageValue = "";
  
   constructor(  public navCtrl: NavController, 
                 public navParams: NavParams, 
                 public rest: RestProvider, 
                 public loadingController: LoadingController) {
     this.pages =   [
-        {title: 'FAQ', icon: 'faq', page: 'FaqPage'},
-        {title: 'Buy Support', icon: 'buy_travel_pass', page: 'BuyTravelPassPage'},
-        {title: 'Contact Us', icon: 'contact_us', page: 'ContactUsPage'},
+        {title: 'FAQ', value: 'faq', page: 'FaqPage'},
+        {title: 'Buy Support Pass', value: 'buy_travel_pass', page: 'BuyTravelPassPage'},
+        {title: 'Contact Us', value: 'contact_us', page: 'ContactUsPage'},
     ];
     
   }
