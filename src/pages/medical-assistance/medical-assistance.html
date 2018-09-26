@@ -1,5 +1,5 @@
 <ion-header hideWhen="core">
-  <page-bsc-header ></page-bsc-header>
+  <page-bsc-header></page-bsc-header>
   <ion-segment [(ngModel)]="pageValue" style="background-color: #62a830;border-color: #62a830" color="light">
     <ion-segment-button *ngFor="let page of pages" [value]="page.value" (click)="moveToServiceDetails(page)">{{page.title}}</ion-segment-button>
   </ion-segment>
@@ -7,7 +7,7 @@
 
 <ion-content hideWhen="core">
 
-	<page-bsc-header showWhen="core" header="Our Services"></page-bsc-header>
+  <page-bsc-header showWhen="core" header="Our Services"></page-bsc-header>
 
   <br>
   <h4 style="text-align: center!important">All Doctors, Dentist and Hospitals are registered and approved providers.</h4>
@@ -15,91 +15,115 @@
   <br><br>
   <h6 style="text-align: center!important;">You can choose the medical service you need</h6>
 
-	<ion-grid class = "grid-adjust">
-		<ion-grid>
-				<ion-row showWhen="core" style="text-align: center; display: flex; justify-content: center;padding-left: 10%; padding-right: 10%">
-					<ion-col col-4  class="flexgrid-core" *ngFor="let page of medicalAssistanceSubPages">
-            <button ion-button full (click) = "medicalAssistanceButtonPressed(page)" >
-              {{page.title | uppercase}}
-            </button>
-					</ion-col>
-				</ion-row>
-				<ion-row hideWhen="core" style="display: flex; justify-content: center;">
-					<ion-col class="flexgrid-mobile" *ngFor="let page of medicalAssistanceSubPages">
-						<button ion-button full icon-end (click) = "medicalAssistanceButtonPressed(page)">
-              {{page.title | uppercase}}
-              <ion-icon name="star"></ion-icon>
-            </button>
-					</ion-col>
-				</ion-row>
-			</ion-grid>
-      <h5 style="text-align: center!important">For Life threatening Emergencies Contact us immediately 24 Hours a day</h5>
-      <br>
+  <ion-grid class="grid-adjust">
+    <ion-grid>
       <ion-row style="display: flex; justify-content: center; text-align: center;">
         <ion-col no-padding>
-          <button ion-button color='primary' style="width: 120px" (click)='buttonBackPressed()'>Call</button>
+          <button ion-button color='primary' style="width: 150px">
+            <div>
+              <label>Doctor</label>
+              <ion-icon name="contact" style="margin-left: 10px"></ion-icon>
+            </div>
+          </button>
         </ion-col>
+
         <ion-col no-padding>
-          <button ion-button color='primary' style="width: 120px" block outline>Bali Office</button>
+          <button ion-button color='primary' style="width: 150px">
+            <div>
+              <label>Dental</label>
+              <ion-icon name="contact" style="margin-left: 10px"></ion-icon>
+            </div>
+          </button>
         </ion-col>
-      </ion-row>
-      <br>
-	</ion-grid>
+      </ion-row><br>
+
+      <ion-row style="display: flex; justify-content: center; text-align: center;">
+        <ion-col no-padding>
+          <button ion-button color='primary' style="width: 150px">
+            <div>
+              <label>Chemist</label>
+              <ion-icon name="contact" style="margin-left: 10px"></ion-icon>
+            </div>
+          </button>
+        </ion-col>
+
+        <ion-col no-padding>
+          <button ion-button color='primary' style="width: 150px">
+            <div>
+              <label>Hospital</label>
+              <ion-icon name="contact" style="margin-left: 10px"></ion-icon>
+            </div>
+          </button>
+        </ion-col>
+      </ion-row><br>
+    </ion-grid>
+    <h5 style="text-align: center!important">For Life threatening Emergencies Contact us immediately 24 Hours a day</h5>
+    <br>
+    <ion-row style="display: flex; justify-content: center; text-align: center;">
+      <ion-col no-padding>
+        <button ion-button color='primary' style="width: 120px" (click)='buttonBackPressed()'>Call</button>
+      </ion-col>
+      <ion-col no-padding>
+        <button ion-button color='primary' style="width: 120px" block outline>Bali Office</button>
+      </ion-col>
+    </ion-row>
+    <br>
+  </ion-grid>
 
 </ion-content>
 
 <ion-content showWhen="core">
 
-	<page-bsc-header showWhen="core" header="Our Services"></page-bsc-header>
+  <page-bsc-header showWhen="core" header="Our Services"></page-bsc-header>
 
-	<h2 hideWhen='core' class="mobile-sub-header">MEDICAL ASSISTANCE</h2>
-	<h2 showWhen='core' class="core-sub-header">MEDICAL ASSISTANCE</h2>
+  <h2 hideWhen='core' class="mobile-sub-header">MEDICAL ASSISTANCE</h2>
+  <h2 showWhen='core' class="core-sub-header">MEDICAL ASSISTANCE</h2>
 
-	<ion-grid class = "grid-adjust">
-		<ion-grid>
-				<ion-row showWhen="core" style="text-align: center; display: flex; justify-content: center;padding-left: 10%; padding-right: 10%">
-					<ion-col col-4  class="flexgrid-core" *ngFor="let page of medicalAssistanceSubPages">
-						<button ion-button full (click) = "medicalAssistanceButtonPressed(page)" >
-							{{page.title | uppercase}}
-						</button>
-					</ion-col>
-				</ion-row>
+  <ion-grid class="grid-adjust">
+    <ion-grid>
+      <ion-row showWhen="core" style="text-align: center; display: flex; justify-content: center;padding-left: 10%; padding-right: 10%">
+        <ion-col col-4 class="flexgrid-core" *ngFor="let page of medicalAssistanceSubPages">
+          <button ion-button full (click)="medicalAssistanceButtonPressed(page)">
+            {{page.title | uppercase}}
+          </button>
+        </ion-col>
+      </ion-row>
 
-				<ion-row hideWhen="core" style="display: flex; justify-content: center; text-align: center;">
-					<ion-col class="flexgrid-mobile" *ngFor="let page of medicalAssistanceSubPages">
-						<button ion-button full (click) = "medicalAssistanceButtonPressed(page)">
-							{{page.title | uppercase}}
-            </button>
-					</ion-col>
-				</ion-row>
-			</ion-grid>
+      <ion-row hideWhen="core" style="display: flex; justify-content: center; text-align: center;">
+        <ion-col class="flexgrid-mobile" *ngFor="let page of medicalAssistanceSubPages">
+          <button ion-button full (click)="medicalAssistanceButtonPressed(page)">
+            {{page.title | uppercase}}
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-			<div style="text-align: center; margin-bottom: 20px;">
-				<button ion-button color='primary' outline (click)='buttonBackPressed()'>Back</button>
-			</div>
-	</ion-grid>
+    <div style="text-align: center; margin-bottom: 20px;">
+      <button ion-button color='primary' outline (click)='buttonBackPressed()'>Back</button>
+    </div>
+  </ion-grid>
 
-	<page-bsc-footer></page-bsc-footer>
+  <page-bsc-footer></page-bsc-footer>
 
 </ion-content>
 
 <ion-footer hideWhen="core">
   <ion-row>
     <ion-col no-padding>
-        <button no-margin ion-button full color="dark" (click)="openService()">
-          <div>
-            <ion-icon name="paper"></ion-icon><br>
-            <label>Services</label>
-          </div>
-        </button>
+      <button no-margin ion-button full color="dark" (click)="openService()">
+        <div>
+          <ion-icon name="paper"></ion-icon><br>
+          <label>Services</label>
+        </div>
+      </button>
     </ion-col>
     <ion-col no-padding>
-        <button no-margin ion-button full color="light" (click)="openToday()">
-          <div>
-            <ion-icon name="partly-sunny"></ion-icon><br>
-            <label>Today</label>
-          </div>
-        </button>
+      <button no-margin ion-button full color="light" (click)="openToday()">
+        <div>
+          <ion-icon name="partly-sunny"></ion-icon><br>
+          <label>Today</label>
+        </div>
+      </button>
     </ion-col>
     <ion-col no-padding>
       <button no-margin ion-button full color="light" (click)="openFavourites()">

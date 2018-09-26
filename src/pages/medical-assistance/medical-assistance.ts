@@ -41,9 +41,11 @@ import { RestProvider } from '../../providers/rest/rest';
 	            	for ( let data of this.bundleData.data ) {
 		            	let medicalTempData = {id : data.id, title : data.title}
 		            	this.medicalAssistanceSubPages.push(medicalTempData)
-		            }	
-	            }
-	           );
+					}
+					console.log(this.medicalAssistanceSubPages[1].title)
+				}
+			   );
+			   
 	}
 
  	medicalAssistanceButtonPressed(page) {
