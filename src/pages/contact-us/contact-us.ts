@@ -26,7 +26,9 @@ export class ContactUsPage {
 
   submittedEnquiry = false;
 
-  pages: Array<{title: string, icon: any, page: any}>;
+  pages: Array<{title: string, value: any, page: any}>;
+
+  pageValue = "contact_us";
 
   constructor(  public navCtrl: NavController, 
                 public navParams: NavParams, 
@@ -35,9 +37,9 @@ export class ContactUsPage {
                 public loadingController: LoadingController,
                 public alertCtrl: AlertController) {
     this.pages =   [
-      {title: 'FAQ', icon: 'faq', page: 'FaqPage'},
-      {title: 'Buy Support', icon: 'buy_travel_pass', page: 'BuyTravelPassPage'},
-      {title: 'Contact Us', icon: 'contact_us', page: 'ContactUsPage'},
+      {title: 'FAQ', value: 'faq', page: 'FaqPage'},
+      {title: 'Buy Support Pass', value: 'buy_travel_pass', page: 'BuyTravelPassPage'},
+      {title: 'Contact Us', value: 'contact_us', page: 'ContactUsPage'},
     ];
   }
 

@@ -25,8 +25,8 @@ export class ContactPage {
   bundleEnquiry = { first_name: '', last_name: '', phone: '', email: '', subject: '', message: ''}
 
   submittedEnquiry = false;
-
-  pages: Array<{title: string, icon: any, page: any}>;
+  pageValue = "contact";
+  pages: Array<{title: string, value: any, page: any}>;
 
   constructor(  public navCtrl: NavController, 
                 public navParams: NavParams, 
@@ -35,9 +35,9 @@ export class ContactPage {
                 public loadingController: LoadingController,
                 public alertCtrl: AlertController) {
     this.pages =   [
-      {title: 'Account', icon: 'account', page: 'AccountPage'},
-      {title: 'Documents', icon: 'document', page: 'DocumentPage'},
-      {title: 'Contacts', icon: 'contact', page: 'ContactPage'},
+      {title: 'Account', value: 'account', page: 'AccountPage'},
+      {title: 'Documents', value: 'document', page: 'DocumentPage'},
+      {title: 'Contacts', value: 'contact', page: 'ContactPage'},
     ];
   }
 

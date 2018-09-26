@@ -17,26 +17,25 @@ import { Storage } from '@ionic/storage';
  })
  export class ServiceDetailsPage {
 
-    pages: Array<{title: string, icon: any, id: any}>;
+    pages: Array<{title: string, value: any, id: any}>;
      bundleData:any
      bundleIsPurchased:any
      serviceDetails = {image_name: '',title: '', description: ''};
      requestBundle = {user_id:'',token:''}
      helpButtonStatus = false
      passedData
+     pageValue = "";
 
-
-
-     constructor(	public navCtrl: NavController, 
+    constructor(	public navCtrl: NavController, 
                     public navParams: NavParams,
                     public loadingController: LoadingController,
                     public rest: RestProvider,
                     private storage: Storage,) {
 
         this.pages =   [
-            {title: 'Medical', icon: 'medical', id: null},
-            {title: 'Lost Passport', icon: 'lost_passport', id: 3},
-            {title: 'Money', icon: 'money', id: 5},
+            {title: 'Medical', value: 'medical', id: null},
+            {title: 'Lost Passport', value: 'lost_passport', id: 3},
+            {title: 'Money', value: 'money', id: 5},
         ];
           this.passedData = JSON.parse(this.navParams.get('service'))
           this.checkForLogin()

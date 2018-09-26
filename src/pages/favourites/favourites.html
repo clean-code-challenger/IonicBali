@@ -1,3 +1,7 @@
+<ion-header hideWhen="core">
+ 	<page-bsc-header ></page-bsc-header>
+</ion-header>
+
 <ion-content hideWhen="core">
   <br>
   <ion-row style="display: flex; justify-content: center; text-align: center;">
@@ -84,3 +88,40 @@
 	<page-bsc-footer></page-bsc-footer>
 
 </ion-content>
+
+<ion-footer hideWhen="core">
+  <ion-row>
+    <ion-col no-padding>
+      <button no-margin ion-button full color="light" (click)="openService()">
+      <div>
+        <ion-icon name="paper"></ion-icon><br>
+        <label>Services</label>
+      </div>
+      </button>
+    </ion-col>
+    <ion-col no-padding>
+      <button no-margin ion-button full color="light" (click)="openToday()">
+      <div>
+        <ion-icon name="partly-sunny"></ion-icon><br>
+        <label>Today</label>
+      </div>
+      </button>
+    </ion-col>
+    <ion-col no-padding>
+    <button no-margin ion-button full color="light" (click)="openFavourites()">
+      <div>
+      <ion-icon name="star"></ion-icon><br>
+      <label>Favourites</label>
+      </div>
+    </button>
+    </ion-col>
+    <ion-col no-padding>
+    <button no-margin ion-button full color="light" (click)="openMe()">
+      <div>
+      <ion-icon name="contact"></ion-icon><br>
+      <label>Me</label>
+      </div>
+    </button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

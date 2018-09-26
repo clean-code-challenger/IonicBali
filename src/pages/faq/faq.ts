@@ -15,16 +15,16 @@ import { RestProvider } from '../../providers/rest/rest';
   templateUrl: 'faq.html',
 })
 export class FaqPage {
-
-  pages: Array<{title: string, icon: any, page: any}>;
+  pages: Array<{title: string, value: any, page: any}>;
   responseData : {data: any} ;
 	bundleDataFAQ : Array<{question: string, answer: string, isOpen: Boolean}> = [];
+  pageValue = "faq";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public rest: RestProvider) {
     this.pages =   [
-      {title: 'FAQ', icon: 'faq', page: 'FaqPage'},
-      {title: 'Buy Support', icon: 'buy_travel_pass', page: 'BuyTravelPassPage'},
-      {title: 'Contact Us', icon: 'contact_us', page: 'ContactUsPage'},
+      {title: 'FAQ', value: 'faq', page: 'FaqPage'},
+      {title: 'Buy Support Pass', value: 'buy_travel_pass', page: 'BuyTravelPassPage'},
+      {title: 'Contact Us', value: 'contact_us', page: 'ContactUsPage'},
     ];
   }
 

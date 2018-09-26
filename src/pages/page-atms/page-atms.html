@@ -1,21 +1,8 @@
 <ion-header hideWhen="core">
     <page-bsc-header ></page-bsc-header>
-    <ion-grid class='bsc-header'>
-        <ion-row style="text-align: center; display: flex; justify-content: center;">
-            <ion-col>
-            <ion-row>
-                <ion-col *ngFor="let page of headerpages">
-
-                <button *ngIf='header==page.title' ion-button class="header-button" color='primary' item-left full (click)="openPage(page)">{{page.title}}</button>
-
-                <button *ngIf='header!=page.title' ion-button class="header-button" color='light' clear item-left full (click)="openPage(page)">{{page.title}}</button>
-
-                </ion-col>
-
-            </ion-row>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+    <ion-segment [(ngModel)]="pageValue" style="background-color: #62a830;border-color: #62a830" color="light">
+        <ion-segment-button *ngFor="let page of headerpages" [value]="page.value" (click)="openPage(page)">{{page.title}}</ion-segment-button>
+    </ion-segment>
 </ion-header>
 
 <ion-content hideWhen="core">

@@ -16,20 +16,20 @@ import { RestProvider } from '../../providers/rest/rest';
 })
 export class PageAtmsPage {
 
-  headerpages: Array<{title: string, icon: any, page: any}>;
+  headerpages: Array<{title: string, value: any, page: any}>;
 	bundleData : {data: any};
 	arrayAtms : any[] = [];
   isListLoaded = false
-
+  pageValue = "atms-banks";
   constructor(	public navCtrl: NavController, 
   				public navParams: NavParams,
   				public rest: RestProvider) {
 
     this.getAtms()
     this.headerpages =   [
-      {title: 'Today', icon: 'today', page: 'InBaliPage'},
-      {title: 'ATMs Banks', icon: 'vaccinations', page: 'PageBankPage'},
-      {title: 'Exchange Rate', icon: 'exchange-rate', page: 'ExchangeRatePage'},
+      {title: 'Today', value: 'today', page: 'InBaliPage'},
+      {title: 'ATMs Banks', value: 'atms-banks', page: 'PageAtmsPage'},
+      {title: 'Exchange Rate', value: 'exchange-rate', page: 'ExchangeRatePage'},
     ];
   }
 

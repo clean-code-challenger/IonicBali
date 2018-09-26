@@ -29,7 +29,7 @@ export class BuyTravelPassPage {
 	finalCost = 0
 	orderId = 0
 
-	pages: Array<{title: string, icon: any, page: any}>;
+	pages: Array<{title: string, value: any, page: any}>;
 	requestBundle = {user_id: '', token: ''}
 	bundleTicketsForServer : Array<TicketStructure> = []
 	bundleSaveTickets : Array<TicketStructure> = []
@@ -44,6 +44,7 @@ export class BuyTravelPassPage {
 	noTicketChosen = false
 
 	errorDateOfBirth = ""
+	pageValue = "buy_travel_pass";
 
 	constructor(	public navCtrl: NavController, 
 					public navParams: NavParams,
@@ -53,9 +54,9 @@ export class BuyTravelPassPage {
 					private storage: Storage,
 					private constantProider : ConstantsProvider) {
 		this.pages =   [
-			{title: 'FAQ', icon: 'faq', page: 'FaqPage'},
-			{title: 'Buy Support', icon: 'buy_travel_pass', page: 'BuyTravelPassPage'},
-			{title: 'Contact Us', icon: 'contact_us', page: 'ContactUsPage'},
+			{title: 'FAQ', value: 'faq', page: 'FaqPage'},
+			{title: 'Buy Support Pass', value: 'buy_travel_pass', page: 'BuyTravelPassPage'},
+			{title: 'Contact Us', value: 'contact_us', page: 'ContactUsPage'},
 		];
 	}
 

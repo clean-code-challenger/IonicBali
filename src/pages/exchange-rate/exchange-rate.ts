@@ -22,18 +22,19 @@ export class ExchangeRatePage {
   baseCurrency = ''
   convertedCurrency = ''
 
-  headerpages: Array<{title: string, icon: any, page: any}>;
+  headerpages: Array<{title: string, value: any, page: any}>;
   exchangeResponse : {base:'', date : '', rates: any};
   currencies : any;
   arrayCurrency = [];
+  pageValue = "exchange-rate"
 
   constructor(  public navCtrl: NavController, 
                 public navParams: NavParams,
                 public rest: RestProvider) {
     this.headerpages =   [
-        {title: 'Today', icon: 'today', page: 'InBaliPage'},
-        {title: 'ATMs Banks', icon: 'vaccinations', page: 'PageAtmsPage'},
-        {title: 'Exchange Rate', icon: 'exchange-rate', page: 'ExchangeRatePage'},
+        {title: 'Today', value: 'today', page: 'InBaliPage'},
+        {title: 'ATMs Banks', value: 'atms-banks', page: 'PageAtmsPage'},
+        {title: 'Exchange Rate', value: 'exchange-rate', page: 'ExchangeRatePage'},
     ];
   }
 

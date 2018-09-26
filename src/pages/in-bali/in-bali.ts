@@ -17,10 +17,11 @@ import { RestProvider } from '../../providers/rest/rest';
 export class InBaliPage {
 
   pages: Array<{name: string, icon: any, page: any}>;
-  headerpages: Array<{title: string, icon: any, page: any}>;
+  headerpages: Array<{title: string, value: any, page: any}>;
   pagesData : {data: any};
 	cmsPages : Array<any> = [];
-
+  pageValue = "today";
+  
   constructor(	public navCtrl: NavController, 
   				      public navParams: NavParams,
                 public rest: RestProvider,) {
@@ -38,9 +39,9 @@ export class InBaliPage {
     ];
 
     this.headerpages =   [
-        {title: 'Today', icon: 'today', page: 'InBaliPage'},
-        {title: 'ATMs Banks', icon: 'vaccinations', page: 'PageAtmsPage'},
-        {title: 'Exchange Rate', icon: 'exchange-rate', page: 'ExchangeRatePage'},
+        {title: 'Today', value: 'today', page: 'InBaliPage'},
+        {title: 'ATMs Banks', value: 'atms-banks', page: 'PageAtmsPage'},
+        {title: 'Exchange Rate', value: 'exchange-rate', page: 'ExchangeRatePage'},
     ];
 
     this.getBaliCMSPages()

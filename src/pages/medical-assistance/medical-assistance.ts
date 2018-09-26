@@ -16,15 +16,15 @@ import { RestProvider } from '../../providers/rest/rest';
  })
  export class MedicalAssistancePage {
 
-	pages: Array<{title: string, icon: any, id: any}>;
+	pages: Array<{title: string, value: any, id: any}>;
  	medicalAssistanceSubPages : Array<{id: string, title: any}> = [];
  	bundleData:any
 
  	constructor(public navCtrl: NavController, public navParams: NavParams,public rest: RestProvider) {
 		this.pages =   [
-			{title: 'Medical', icon: 'star', id: null},
-			{title: 'Lost Passport', icon: 'star', id: 3},
-			{title: 'Money', icon: 'star', id: 5},
+			{title: 'Medical', value: 'medical', id: null},
+			{title: 'Lost Passport', value: 'passport', id: 3},
+			{title: 'Money', value: 'money', id: 5},
 		];
  	}
 
@@ -60,7 +60,7 @@ import { RestProvider } from '../../providers/rest/rest';
 		if(page.id != null) {
 			  this.navCtrl.push('ServiceDetailsPage', {
 			'service': JSON.stringify(page.id),
-		  })
+			})
 		}
 	}
 

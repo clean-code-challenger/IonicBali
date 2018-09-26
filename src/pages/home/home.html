@@ -1,9 +1,7 @@
-
-
 <ion-header hideWhen="core">
   <page-bsc-header ></page-bsc-header>
   <ion-segment [(ngModel)]="pageValue" style="background-color: #62a830;border-color: #62a830" color="light">
-    <ion-segment-button *ngFor="let page of pages" [value]="page.value">{{page.title}}</ion-segment-button>
+    <ion-segment-button *ngFor="let page of pages" [value]="page.value" (click)="openPage(page)">{{page.title}}</ion-segment-button>
   </ion-segment>
 </ion-header>
 
@@ -37,12 +35,6 @@
             <button ion-button round outline (click)="openPage({page:constantProvider.loginPage})">Log In</button>
          </ion-col> 
       </ion-row><br>
-      <ion-tabs tabs-only tabsPlacement="bottom" color="light" #bottomTabs>
-        <ion-tab tabIcon="paper" tabTitle="Services" [root]="tab1"></ion-tab>
-        <ion-tab tabIcon="partly-sunny" tabTitle="Today" [root]="tab2"></ion-tab>
-        <ion-tab tabIcon="star" tabTitle="Favourites" [root]="tab3"></ion-tab>
-        <ion-tab tabIcon="contact" tabTitle="Me" [root]="tab4"></ion-tab>
-      </ion-tabs>
 </ion-content>
 
 <ion-content showWhen="core" no-bounce>
@@ -129,5 +121,38 @@
 </ion-content>
 
 <ion-footer hideWhen="core">
-
+	<ion-row>
+	  <ion-col no-padding>
+		  <button no-margin ion-button full color="light" (click)="openService()">
+			<div>
+			  <ion-icon name="paper"></ion-icon><br>
+			  <label>Services</label>
+			</div>
+		  </button>
+	  </ion-col>
+	  <ion-col no-padding>
+		  <button no-margin ion-button full color="light" (click)="openToday()">
+			<div>
+			  <ion-icon name="partly-sunny"></ion-icon><br>
+			  <label>Today</label>
+			</div>
+		  </button>
+	  </ion-col>
+	  <ion-col no-padding>
+		<button no-margin ion-button full color="light" (click)="openFavourites()">
+		  <div>
+			<ion-icon name="star"></ion-icon><br>
+			<label>Favourites</label>
+		  </div>
+		</button>
+	  </ion-col>
+	  <ion-col no-padding>
+		<button no-margin ion-button full color="light" (click)="openMe()">
+		  <div>
+			<ion-icon name="contact"></ion-icon><br>
+			<label>Me</label>
+		  </div>
+		</button>
+	  </ion-col>
+	</ion-row>
 </ion-footer>
